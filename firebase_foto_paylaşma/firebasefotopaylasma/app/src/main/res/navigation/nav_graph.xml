@@ -1,0 +1,67 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.fotografpaylasma.ui.view.KullaniciFragment"
+        android:label="fragment_kullanici"
+        tools:layout="@layout/fragment_kullanici" >
+        <action
+            android:id="@+id/action_kullaniciFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.example.fotografpaylasma.ui.view.FeedFragment"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_feed" >
+        <action
+            android:id="@+id/action_feedFragment_to_yuklemeFragment"
+            app:destination="@id/yuklemeFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_kullaniciFragment"
+            app:destination="@id/profilFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_yuklemeFragment2"
+            app:destination="@id/yuklemeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/yuklemeFragment"
+        android:name="com.example.fotografpaylasma.ui.view.YuklemeFragment"
+        android:label="fragment_yukleme"
+        tools:layout="@layout/fragment_yukleme" >
+        <action
+            android:id="@+id/action_yuklemeFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/action_yuklemeFragment_self"
+            app:destination="@id/yuklemeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.example.fotografpaylasma.ui.view.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" >
+        <action
+            android:id="@+id/action_profilFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/action_profilFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_profilFragment_self"
+            app:destination="@id/profilFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/feedFragment"
+        android:icon="@drawable/ic_feed"
+        android:title="Ana Sayfa" />
+    <item
+        android:id="@+id/yuklemeFragment"
+        android:icon="@drawable/ic_add_post"
+        android:title="Yeni Post Ekle" />
+    <item
+        android:id="@+id/profilFragment"
+        android:icon="@drawable/ic_user"
+        android:title="Profil" />
+</menu>
