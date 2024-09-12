@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.yemeksiparis.view.fragment.AnasayfaFragment"
+        android:label="AnasayfaFragment" >
+        <action
+            android:id="@+id/action_anasayfaFragment_to_detayFragment"
+            app:destination="@id/detayFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detayFragment"
+        android:name="com.example.yemeksiparis.view.fragment.DetayFragment"
+        android:label="fragment_detay"
+        tools:layout="@layout/fragment_detay">
+        <argument
+            android:name="yemekler"
+            app:argType="com.example.yemeksiparis.model.Yemekler" />
+        <action
+            android:id="@+id/action_detayFragment_to_sepetFragment"
+            app:destination="@id/sepetFragment" />
+        <action
+            android:id="@+id/action_detayFragment_to_favoriFragment"
+            app:destination="@id/favoriFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/favoriFragment"
+        android:name="com.example.yemeksiparis.view.fragment.FavoriFragment"
+        android:label="fragment_favori"
+        tools:layout="@layout/fragment_favori" >
+        <argument
+            android:name="favoriler"
+            app:argType="com.example.yemeksiparis.model.Yemekler" />
+        <action
+            android:id="@+id/action_favoriFragment_to_anasayfaFragment"
+            app:destination="@id/anasayfaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sepetFragment"
+        android:name="com.example.yemeksiparis.view.fragment.SepetFragment"
+        android:label="fragment_sepet"
+        tools:layout="@layout/fragment_sepet">
+        <action
+            android:id="@+id/action_sepetFragment_to_anasayfaFragment"
+            app:destination="@id/anasayfaFragment" />
+        <argument
+            android:name="yemekler"
+            app:argType="com.example.yemeksiparis.model.Yemekler" />
+        <action
+            android:id="@+id/action_sepetFragment_to_favoriFragment"
+            app:destination="@id/favoriFragment" />
+        <action
+            android:id="@+id/action_sepetFragment_to_detayFragment"
+            app:destination="@id/detayFragment" />
+    </fragment>
+</navigation>
+

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">YemekSiparis</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="increase_button_description">Miktarı artır</string>
+    <string name="decrease_button_description">Miktarı azalt</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
